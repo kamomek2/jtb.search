@@ -4,8 +4,9 @@ Includes:
 * react
 * react-redux
 * react-router
-* react-router-redux
+* connected-react-router
 * redux-saga
 * redux-persist
+* sass, less
 * reduxsauce
-* flow support
+* typescript
