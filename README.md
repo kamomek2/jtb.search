@@ -7,6 +7,6 @@ Includes:
 * connected-react-router
 * redux-saga
 * redux-persist
-* sass, less
+* less, sass (modular)
 * reduxsauce
 * typescript
