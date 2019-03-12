@@ -1,6 +1,6 @@
 import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
 import { delay } from 'redux-saga';
-import TYPES from '../../constants/actionTypes';
+import { USER_ACTIONS } from "$redux/user/userActions";
 
 // Worker Saga for SET_EDITOR_LOCATION_INPUT reducer
 /*

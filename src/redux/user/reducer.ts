@@ -1,9 +1,9 @@
 import { createReducer } from 'reduxsauce';
 
-import TYPES from '../../constants/actionTypes';
+import { USER_ACTIONS } from "$redux/user/userActions";
 
 const someActionHandler = (state, { payload }) => {
-  
+
   // const {
   //   //val1,
   //   //val2,
@@ -14,7 +14,7 @@ const someActionHandler = (state, { payload }) => {
 };
 
 const HANDLERS = {
-  [TYPES.SOME_ACTION]: someActionHandler,
+  [USER_ACTIONS.SOME_ACTION]: someActionHandler,
 };
 
 const INITIAL_STATE = {
