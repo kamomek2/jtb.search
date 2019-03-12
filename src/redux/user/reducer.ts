@@ -1,23 +1,25 @@
 import { createReducer } from 'reduxsauce';
+import * as ACTIONS from "$redux/user/actions";
+import { USER_ACTIONS } from "$redux/user/constants";
 
-import { USER_ACTIONS } from "$redux/user/userActions";
+export type IRootState = Readonly<{
+  // key: string
+}>;
 
-const someActionHandler = (state, { payload }) => {
+type UnsafeReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
+interface ActionHandler<T> {
+  (state: IRootState, payload: UnsafeReturnType<T>): IRootState;
+}
 
-  // const {
-  //   //val1,
-  //   //val2,
-  //   //val3,
-  // } = payload;
-
-  return { ...state, /* val1, val2, val3 */ };
+const someActionHandler: ActionHandler<typeof ACTIONS.someAction> = (state) => {
+  return { ...state };
 };
 
 const HANDLERS = {
   [USER_ACTIONS.SOME_ACTION]: someActionHandler,
 };
 
-const INITIAL_STATE = {
+const INITIAL_STATE: IRootState = {
   // key: val,
   // key: val,
   // key: val

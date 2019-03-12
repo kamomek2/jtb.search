@@ -1,10 +1,8 @@
-// @flow
 import * as React from 'react';
-import classNames from 'classnames';
 
 interface ISomeComponentProps {}
 
-export const SomeComponent = (props: ISomeComponentProps) => {
+export const SomeComponent: React.FunctionComponent<ISomeComponentProps> = (props) => {
   const { } = props;
 
   return (

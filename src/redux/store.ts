@@ -43,10 +43,3 @@ export function configureStore(): { store: Store<any>, persistor: Persistor } {
 
   return { store, persistor };
 }
-//
-// export const history = createBrowserHistory();
-
-// history.listen((location, action) => {
-//   if (action === 'REPLACE') return;
-//   store.dispatch(locationChanged(location.pathname));
-// });
