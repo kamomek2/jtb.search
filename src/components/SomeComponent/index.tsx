@@ -1,4 +1,5 @@
 import * as React from 'react';
+const styles = require("./styles.scss");
 
 interface ISomeComponentProps {}
 
@@ -6,7 +7,7 @@ export const SomeComponent: React.FunctionComponent<ISomeComponentProps> = (prop
   const { } = props;
 
   return (
-    <div>This is some component</div>
+    <div className={styles.main}>This is some component</div>
   );
 };
 

@@ -61,7 +61,16 @@ module.exports = () => {
           test: /\.less$/,
           use: [
             { loader: isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader },
-            { loader: 'css-loader' },
+            // { loader: 'css-loader' },
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                sourceMap: true,
+                importLoaders: 2,
+                localIdentName: '[name]__[local]__[hash:base64:5]'
+              }
+            },
             { loader: 'less-loader' }
           ]
         },
@@ -69,8 +78,23 @@ module.exports = () => {
           test: /\.scss$/,
           use: [
             { loader: isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader },
-            { loader: 'css-loader' },
-            { loader: 'sass-loader' }
+            // { loader: 'css-loader' },
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                sourceMap: true,
+                importLoaders: 2,
+                localIdentName: '[name]__[local]__[hash:base64:5]'
+              }
+            },
+            { loader: 'sass-loader' },
+            {
+              loader: 'sass-resources-loader',
+              options: {
+                resources: ['src/styles/variables.scss'],
+              },
+            },
           ]
         },
         {
