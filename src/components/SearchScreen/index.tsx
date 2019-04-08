@@ -9,7 +9,7 @@ import * as searchActions from '$redux/search/actions';
 
 const style = require('./style.scss');
 
-interface ISearchScreenProps extends ISearchState {
+export interface ISearchScreenProps extends ISearchState {
   searchSetSearchString: typeof searchActions.searchSetSearchString,
   searchPerformSearch: typeof searchActions.searchPerformSearch,
 }
