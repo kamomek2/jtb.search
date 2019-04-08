@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "build": "rm -rf ./dist && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist && npm run copy-css && git add .",
+    "build": "rm -rf ./dist && tsc --project tsconfig.json && npm run copy-css && git add .",
     "copy-css": "copyfiles -u 1 \"./src/**/**/**/**/*.scss\" ./dist",
     "prepare": "npm run build",
     "start": "NODE_ENV=development webpack-dev-server --mode development --hot --open --inline --progress",
