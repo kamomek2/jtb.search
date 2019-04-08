@@ -3,6 +3,7 @@
 $desktop_max_width: 1024px;
 $default_font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 $gap: 20px;
+$border_radius: 4px;
 
 @mixin input_wrapper {
   border: 1px solid white;
