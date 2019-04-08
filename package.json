@@ -1,6 +1,6 @@
 {
-  "name": "my-empty-react-project",
-  "version": "2.0.0",
+  "name": "jtb.search",
+  "version": "0.0.1",
   "description": "",
   "main": "src/index.ts",
   "scripts": {
@@ -11,7 +11,7 @@
   "author": "Fedor Katurov <gotham48@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/muerwre/my-empty-react-project"
+    "url": "https://github.com/muerwre/jtb.search"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-rc.1",
