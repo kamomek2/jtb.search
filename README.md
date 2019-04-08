@@ -1,12 +1,3 @@
-### My empty react project template
+### JTB Search Component (main)
 
-Includes:
-* react
-* react-redux
-* react-router
-* connected-react-router
-* redux-saga
-* redux-persist
-* less, sass (modular)
-* reduxsauce
-* typescript
+Will dispatch the search and handle routing.

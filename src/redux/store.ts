@@ -1,20 +1,13 @@
 import { createStore, applyMiddleware, combineReducers, compose, Store } from 'redux';
 
 import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
 import createSagaMiddleware from 'redux-saga';
-import { connectRouter } from 'connected-react-router'
-import userReducer from '$redux/user/reducer';
-import userSaga from '$redux/user/sagas';
+import { connectRouter, RouterState } from 'connected-react-router'
+import searchReducer, { ISearchState, searchPersistConfig } from '$redux/search/reducer';
+import searchSagas from '$redux/search/sagas';
 import { createBrowserHistory } from 'history';
-import { PersistConfig, Persistor } from "redux-persist/es/types";
+import { PersistedState, Persistor } from "redux-persist/es/types";
 import { routerMiddleware } from 'connected-react-router'
-
-const userPersistConfig: PersistConfig = {
-  key: 'user',
-  whitelist: ['user', 'logo', 'provider', 'speed'],
-  storage,
-};
 
 export const sagaMiddleware = createSagaMiddleware();
 export const history = createBrowserHistory();
@@ -27,7 +20,7 @@ const composeEnhancers =
 
 export const store = createStore(
   combineReducers({
-    user: persistReducer(userPersistConfig, userReducer),
+    search: persistReducer(searchPersistConfig, searchReducer),
     router: connectRouter(history),
   }),
   composeEnhancers(applyMiddleware(
@@ -37,9 +30,13 @@ export const store = createStore(
 );
 
 export function configureStore(): { store: Store<any>, persistor: Persistor } {
-  sagaMiddleware.run(userSaga);
-
+  sagaMiddleware.run(searchSagas);
   const persistor = persistStore(store);
 
   return { store, persistor };
+}
+
+export interface IStore {
+  search: ISearchState,
+  router: RouterState,
 }

@@ -9,7 +9,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
   filename: './index.html',
-  title: 'Empty React Project',
+  title: 'JTB search example',
   hash: false,
   // favicon: 'src/sprites/favicon.png',
 });
@@ -128,7 +128,7 @@ module.exports = () => {
     resolve,
     plugins,
     entry: {
-      app: './src/index.tsx',
+      app: './src/app.tsx',
     },
     output: {
       publicPath: '/',
