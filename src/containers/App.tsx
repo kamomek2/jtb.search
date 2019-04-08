@@ -6,7 +6,8 @@ import { ConnectedRouter } from "connected-react-router";
 import { history } from "$redux/store";
 import { NavLink, Switch, Route } from 'react-router-dom';
 import { SEARCH_PATHS } from "$constants/paths";
-import SearchScreen from "$containers/SearchScreen";
+import SearchLayout from "$containers/SearchLayout";
+import ResultLayout from "$containers/ResultLayout";
 
 interface IAppProps {}
 interface IAppState {}
@@ -22,11 +23,11 @@ class Component extends React.Component<IAppProps, IAppState> {
             <Route
               exact
               path={SEARCH_PATHS.ROOT}
-              component={SearchScreen}
+              component={SearchLayout}
             />
             <Route
               path={SEARCH_PATHS.SEARCH}
-              component={null}
+              component={ResultLayout}
             />
           </Switch>
         </div>
