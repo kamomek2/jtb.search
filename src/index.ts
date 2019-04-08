@@ -4,3 +4,4 @@ export { SEARCH_PATHS } from "./constants/paths";
 export { SEARCH_ACTIONS } from "./redux/search/constants";
 export * from './redux/search/actions';
 export { default as SearchScreen } from './components/SearchScreen';
+export { ISearchState } from './redux/search/reducer';
