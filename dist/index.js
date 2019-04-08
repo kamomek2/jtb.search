@@ -13,4 +13,6 @@ exports.SEARCH_PATHS = paths_1.SEARCH_PATHS;
 var constants_1 = require("./redux/search/constants");
 exports.SEARCH_ACTIONS = constants_1.SEARCH_ACTIONS;
 __export(require("./redux/search/actions"));
+var SearchScreen_1 = require("./components/SearchScreen");
+exports.SearchScreen = SearchScreen_1.default;
 //# sourceMappingURL=index.js.map
