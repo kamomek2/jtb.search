@@ -1,5 +1,5 @@
-import { SEARCH_ACTIONS } from "$redux/search/constants";
-import { ISearchState } from "$redux/search/reducer";
+import { SEARCH_ACTIONS } from "./constants";
+import { ISearchState } from "./reducer";
 
 export const searchSetSearchString = (query: string) => ({ type: SEARCH_ACTIONS.SET_SEARCH_STRING, query });
 export const searchPerformSearch = () => ({ type: SEARCH_ACTIONS.PERFORM_SEARCH });

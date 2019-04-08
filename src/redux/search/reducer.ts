@@ -1,6 +1,6 @@
 import { createReducer } from 'reduxsauce';
-import * as ACTIONS from "$redux/search/actions";
-import { SEARCH_ACTIONS } from "$redux/search/constants";
+import * as ACTIONS from "./actions";
+import { SEARCH_ACTIONS } from "./constants";
 import storage from "redux-persist/lib/storage";
 import { PersistConfig } from "redux-persist/es/types";
 import { format, addDays } from 'date-fns';

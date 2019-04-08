@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { IStore } from "$redux/store";
-import { SearchForm } from "$components/SearchForm";
-import { ISearchState } from "$redux/search/reducer";
+import { IStore } from "../../redux/store";
+import { SearchForm } from "../SearchForm";
+import { ISearchState } from "../../redux/search/reducer";
 import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
 
-import * as searchActions from '$redux/search/actions';
+import * as searchActions from '../../redux/search/actions';
 
 const style = require('./style.scss');
 

@@ -3,8 +3,8 @@ import { createStore, applyMiddleware, combineReducers, compose, Store } from 'r
 import { persistStore, persistReducer } from 'redux-persist';
 import createSagaMiddleware from 'redux-saga';
 import { connectRouter, RouterState } from 'connected-react-router'
-import searchReducer, { ISearchState, searchPersistConfig } from '$redux/search/reducer';
-import searchSagas from '$redux/search/sagas';
+import searchReducer, { ISearchState, searchPersistConfig } from './search/reducer';
+import searchSagas from './search/sagas';
 import { createBrowserHistory } from 'history';
 import { PersistedState, Persistor } from "redux-persist/es/types";
 import { routerMiddleware } from 'connected-react-router'

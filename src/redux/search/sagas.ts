@@ -1,9 +1,9 @@
 import { put, takeLatest, select } from 'redux-saga/effects';
-import { SEARCH_ACTIONS } from "$redux/search/constants";
+import { SEARCH_ACTIONS } from "./constants";
 import { push } from "connected-react-router";
-import { SEARCH_PATHS } from "$constants/paths";
-import { IStore } from "$redux/store";
-import { searchDispatchSearchQuery } from "$redux/search/actions";
+import { SEARCH_PATHS } from "../../constants/paths";
+import { IStore } from "../store";
+import { searchDispatchSearchQuery } from "./actions";
 
 function* performSearchSaga() {
   yield put(push(SEARCH_PATHS.SEARCH));

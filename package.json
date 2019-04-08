@@ -2,7 +2,7 @@
   "name": "jtb.search",
   "version": "0.0.3",
   "description": "",
-  "main": "dist/index.js",
+  "main": "src/index.ts",
   "scripts": {
     "build": "rm -rf ./dist && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist && npm run copy-css && git add .",
     "copy-css": "copyfiles -u 1 \"./src/**/**/**/**/*.scss\" ./dist",

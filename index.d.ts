@@ -1,7 +1,6 @@
 import { Reducer } from "redux";
 import { PersistConfig } from "redux-persist/es/types";
 import * as React from "react";
-import { ISearchScreenProps } from "./src/components/SearchScreen";
 
 declare const searchReducer: Reducer;
 declare const searchPersistConfig: PersistConfig;
