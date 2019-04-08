@@ -1,11 +1,25 @@
 {
-  "presets": ["env", "react","stage-2"],
+  "presets": ["env", "react","stage-2","@babel/preset-typescript",],
   "plugins": [
     "react-hot-loader/babel",
     "lodash",
     ["transform-runtime", {
       "polyfill": false,
       "regenerator": true
+    }],
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "$components/*": "src/components/*",
+        "$containers/*": "src/containers/*",
+        "$constants/*": "src/constants/*",
+        "$sprites/*": "src/sprites/*",
+        "$config/*": "./config/*",
+        "$styles/*": "src/styles/*",
+        "$redux/*": "src/redux/*",
+        "$utils/*": "src/utils/*"
+      },
+      "extensions": [".js", ".ts", ".tsx"]
     }]
   ]
 }

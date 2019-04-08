@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const reduxsauce_1 = require("reduxsauce");
-const constants_1 = require("$redux/search/constants");
+const constants_1 = require("./constants");
 const storage_1 = require("redux-persist/lib/storage");
 const date_fns_1 = require("date-fns");
 const setSearchString = (state, { query }) => (Object.assign({}, state, { query }));

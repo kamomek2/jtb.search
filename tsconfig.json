@@ -19,12 +19,12 @@
       "$config/*": [ "./config/*" ],
       "$styles/*": [ "src/styles/*" ],
       "$redux/*": [ "src/redux/*" ],
-      "$utils/*": [ "src/utils/*" ],
+      "$utils/*": [ "src/utils/*" ]
     },
     "typeRoots": [
       "index.d.ts",
       "node_modules/@types"
-    ],
+    ]
   },
   "include": [
     "./src/index.ts",
