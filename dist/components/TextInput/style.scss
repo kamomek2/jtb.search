@@ -1,0 +1,14 @@
+.wrapper {
+  @include input_wrapper();
+}
+
+.input {
+  @include seamless_input();
+}
+
+.label {
+  color: transparentize(white, 0.5);
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 0.8em;
+}
