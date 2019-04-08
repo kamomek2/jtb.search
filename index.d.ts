@@ -8,6 +8,6 @@ declare const searchPersistConfig: PersistConfig;
 declare const searchSaga;
 declare const SEARCH_PATHS;
 declare const SEARCH_ACTIONS;
-declare class SearchScreen extends React.PureComponent<ISearchScreenProps, {}> {}
+declare class SearchScreen extends React.PureComponent<{}, {}> {}
 
 declare module 'jtb.search' {}
