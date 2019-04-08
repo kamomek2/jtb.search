@@ -4,7 +4,7 @@ import { SagaIterator } from "redux-saga";
 
 declare const searchReducer: Reducer;
 declare const searchPersistConfig: PersistConfig;
-declare const searchSaga: SagaIterator;
+declare const searchSaga: Iterator<any>;
 declare const SEARCH_PATHS;
 declare const SEARCH_ACTIONS;
 
