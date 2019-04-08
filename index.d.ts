@@ -10,5 +10,4 @@ declare const SEARCH_PATHS;
 declare const SEARCH_ACTIONS;
 declare class SearchScreen extends React.PureComponent<ISearchScreenProps, {}> {}
 
-declare module 'jtb.search' {
-}
+declare module 'jtb.search' {}
