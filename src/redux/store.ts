@@ -11,6 +11,7 @@ import searchReducer, { ISearchState, searchPersistConfig } from './search/reduc
 import searchSagas from './search/sagas';
 
 import { flightReducer, IFlightState, flightPersistConfig, flightSaga } from 'jtb.flights';
+import { hotelReducer, IHotelState, hotelPersistConfig, hotelSaga } from 'jtb.hotels';
 
 export const sagaMiddleware = createSagaMiddleware();
 export const history = createBrowserHistory();
@@ -24,6 +25,7 @@ const composeEnhancers =
 export const store = createStore(
   combineReducers({
     flight: persistReducer(flightPersistConfig, flightReducer),
+    hotel: persistReducer(hotelPersistConfig, hotelReducer),
     search: persistReducer(searchPersistConfig, searchReducer),
     router: connectRouter(history),
   }),
@@ -36,12 +38,16 @@ export const store = createStore(
 export function configureStore(): { store: Store<any>, persistor: Persistor } {
   sagaMiddleware.run(searchSagas);
   sagaMiddleware.run(flightSaga);
+  sagaMiddleware.run(hotelSaga);
+
   const persistor = persistStore(store);
 
   return { store, persistor };
 }
 
 export interface IStore {
+  flight: IFlightState,
+  hotel: IHotelState,
   search: ISearchState,
   router: RouterState,
 }
