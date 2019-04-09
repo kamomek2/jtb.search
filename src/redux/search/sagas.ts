@@ -14,7 +14,6 @@ function* performSearchSaga() {
   }: IStore = yield select();
 
   yield put(searchDispatchSearchQuery({ query, arrival_date, departure_date }));
-  console.log({ query, arrival_date, departure_date, })
 }
 
 function* mySaga() {

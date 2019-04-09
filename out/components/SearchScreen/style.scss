@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  background: #777777 url("http://www.thatsmags.com/image/view/201703/shanghai-hongqiao-terminal-10.jpg");
+  background-size: cover;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 1 0;
+  box-sizing: border-box;
+  padding: 40px;
+
+  &::before {
+    content: ' ';
+    background: rgba(0,0,0,0.7);
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.container {
+  max-width: $desktop_max_width;
+  flex: 1 0;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 200;
+  margin: 0 0 1em 0;
+  color: white;
+}

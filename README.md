@@ -11,6 +11,12 @@ cd jtb.search.git
 npm i
 ```
 
+Install copyfiles (we need it to put scss files in dist folder):
+```
+sudo npm i -S copyfiles
+```
+
+
 Run it:
 ```
 npm start
