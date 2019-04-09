@@ -7,7 +7,7 @@ Clone and install:
 
 ```
 git clone https://github.com/muerwre/jtb.search.git
-cd jtb.search.git
+cd jtb.search
 yarn
 ```
 
