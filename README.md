@@ -1,6 +1,12 @@
 ## JTB Search Component (main)
 
-Will dispatch the search and handle routing.
+Will dispatch the search and handle routing between screens. Flights and Hotels components included from 
+github (can be done via npm) repos as build dependencies.
+
+
+Flights: https://github.com/muerwre/jtb.flights 
+
+Hotels: https://github.com/muerwre/jtb.hotelss 
 
 ### Setup
 Clone and install:
