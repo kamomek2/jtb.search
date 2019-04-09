@@ -15,6 +15,6 @@ declare const searchSetSearchString: typeof searchActions.searchSetSearchString;
 declare const searchPerformSearch: typeof searchActions.searchPerformSearch;
 declare const searchDispatchSearchQuery: typeof searchActions.searchDispatchSearchQuery;
 
-declare type ISearchState = ISearchState;
+declare interface ISearchState {}
 
 declare module 'jtb.search' {}

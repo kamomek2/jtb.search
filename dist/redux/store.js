@@ -8,6 +8,7 @@ const history_1 = require("history");
 const connected_react_router_2 = require("connected-react-router");
 const reducer_1 = require("./search/reducer");
 const sagas_1 = require("./search/sagas");
+const jtb_flights_1 = require("jtb.flights");
 exports.sagaMiddleware = redux_saga_1.default();
 exports.history = history_1.createBrowserHistory();
 const composeEnhancers = typeof window === 'object' &&
@@ -15,11 +16,13 @@ const composeEnhancers = typeof window === 'object' &&
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
     : redux_1.compose;
 exports.store = redux_1.createStore(redux_1.combineReducers({
+    flight: redux_persist_1.persistReducer(jtb_flights_1.flightPersistConfig, jtb_flights_1.flightReducer),
     search: redux_persist_1.persistReducer(reducer_1.searchPersistConfig, reducer_1.default),
     router: connected_react_router_1.connectRouter(exports.history),
 }), composeEnhancers(redux_1.applyMiddleware(connected_react_router_2.routerMiddleware(exports.history), exports.sagaMiddleware)));
 function configureStore() {
     exports.sagaMiddleware.run(sagas_1.default);
+    exports.sagaMiddleware.run(jtb_flights_1.flightSaga);
     const persistor = redux_persist_1.persistStore(exports.store);
     return { store: exports.store, persistor };
 }
