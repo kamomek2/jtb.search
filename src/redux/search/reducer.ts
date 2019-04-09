@@ -1,16 +1,10 @@
 import { createReducer } from 'reduxsauce';
-import * as ACTIONS from "./actions";
-import { SEARCH_ACTIONS } from "./constants";
+import * as ACTIONS from "$redux/search/actions";
+import { SEARCH_ACTIONS } from "$redux/search/constants";
 import storage from "redux-persist/lib/storage";
 import { PersistConfig } from "redux-persist/es/types";
 import { format, addDays } from 'date-fns';
-
-export type ISearchState = Readonly<{
-  // key: string
-  query: string,
-  departure_date: string,
-  arrival_date: string,
-}>;
+import { ISearchState } from "index";
 
 type UnsafeReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
 interface ActionHandler<T> {

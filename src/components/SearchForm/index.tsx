@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { ISearchState } from "../../redux/search/reducer";
-import { TextInput } from "../../components/TextInput";
+import { ISearchState } from "index";
+import { TextInput } from "$components/TextInput";
 const style = require('./style.scss');
 
 interface ISearchFormProps extends ISearchState {

@@ -4,11 +4,12 @@ import { persistStore, persistReducer } from 'redux-persist';
 import createSagaMiddleware from 'redux-saga';
 import { connectRouter, RouterState } from 'connected-react-router'
 import { createBrowserHistory } from 'history';
-import { PersistedState, Persistor } from "redux-persist/es/types";
+import { Persistor } from "redux-persist/es/types";
 import { routerMiddleware } from 'connected-react-router'
 
-import searchReducer, { ISearchState, searchPersistConfig } from './search/reducer';
-import searchSagas from './search/sagas';
+import searchReducer, { searchPersistConfig } from '$redux/search/reducer';
+import { ISearchState } from "index";
+import searchSagas from '$redux/search/sagas';
 
 import { flightReducer, IFlightState, flightPersistConfig, flightSaga } from 'jtb.flights';
 import { hotelReducer, IHotelState, hotelPersistConfig, hotelSaga } from 'jtb.hotels';
