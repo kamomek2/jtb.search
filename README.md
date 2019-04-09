@@ -39,7 +39,10 @@ This means, that we have { search, flight, history } data storage and async list
 
 ### Async calls
 We created mockups for async calls. ```jtb.flights``` will produce fake api response within 1s and  ```jtb.hotels``` 
-will do it after 1.5s.
+will do it after 1.5s. 
+
+See [Hotel Sagas](https://github.com/muerwre/jtb.hotels/blob/master/src/redux/hotel/sagas.ts) and
+[Flight Sagas](https://github.com/muerwre/jtb.flights/blob/master/src/redux/flight/sagas.ts) for details.
 
 ### Shared components 
 ```jtb.flights``` and ```jtb.hotels``` will require  ```jtb.search```'s fully functional Search Form when you'll
