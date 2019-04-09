@@ -6,7 +6,7 @@ github (can be done via npm) repos as build dependencies.
 
 Flights: https://github.com/muerwre/jtb.flights 
 
-Hotels: https://github.com/muerwre/jtb.hotelss 
+Hotels: https://github.com/muerwre/jtb.hotels
 
 ### Setup
 Clone and install:
