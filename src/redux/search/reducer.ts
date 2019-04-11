@@ -20,7 +20,7 @@ const HANDLERS = {
   [SEARCH_ACTIONS.SET_SEARCH_STRING]: setSearchString,
 };
 
-const INITIAL_STATE: ISearchState = {
+export const INITIAL_STATE: ISearchState = {
   query: '',
   departure_date: format(new Date(), 'dd MMM yyyy'),
   arrival_date: format(addDays(new Date(), 14), 'dd MMM yyyy'),

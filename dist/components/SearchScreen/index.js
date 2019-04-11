@@ -27,6 +27,7 @@ class SearchScreen extends React.PureComponent {
                 React.createElement(SearchForm_1.SearchForm, { onQueryChange: this.onQueryChange, onArrivalChange: this.onArrivalChange, onDepartureChange: this.onDepartureChange, onSubmit: this.onSubmit, query: query, arrival_date: arrival_date, departure_date: departure_date }))));
     }
 }
+exports.SearchScreen = SearchScreen;
 const mapStateToProps = ({ search }) => (Object.assign({}, search));
 const mapDispatchToProps = dispatch => redux_1.bindActionCreators({
     searchSetSearchString: searchActions.searchSetSearchString,

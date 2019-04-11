@@ -14,7 +14,7 @@ export interface ISearchScreenProps extends ISearchState {
   searchPerformSearch: typeof searchActions.searchPerformSearch,
 }
 
-class SearchScreen extends React.PureComponent<ISearchScreenProps, {}> {
+export class SearchScreen extends React.PureComponent<ISearchScreenProps, {}> {
   onArrivalChange = () => {};
   onDepartureChange = () => {};
 

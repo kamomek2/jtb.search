@@ -1,4 +1,4 @@
-export { default as searchReducer, searchPersistConfig } from '$redux/search/reducer';
+export { default as searchReducer, searchPersistConfig, INITIAL_STATE as SEARCH_INITIAL_STATE } from '$redux/search/reducer';
 export { default as searchSaga } from '$redux/search/sagas';
 export { SEARCH_PATHS } from "$constants/paths";
 export { SEARCH_ACTIONS } from "$redux/search/constants";

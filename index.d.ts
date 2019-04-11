@@ -1,6 +1,7 @@
 import { Reducer } from "redux";
 import { PersistConfig } from "redux-persist/es/types";
 import * as React from "react";
+import * as Types from './src/types';
 
 declare const searchReducer: Reducer;
 declare const searchPersistConfig: PersistConfig;
@@ -9,10 +10,6 @@ declare const SEARCH_PATHS;
 declare const SEARCH_ACTIONS;
 declare class SearchScreen extends React.PureComponent<{}, {}> {}
 
-export type ISearchState = Readonly<{
-  query: string,
-  departure_date: string,
-  arrival_date: string,
-}>;
+declare type ISearchState = Types.ISearchState;
 
 declare module 'jtb.search' {}
