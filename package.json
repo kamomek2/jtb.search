@@ -18,6 +18,9 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0-rc.1",
     "@babel/preset-env": "^7.0.0-rc.1",
+    "@types/classnames": "^2.2.7",
+    "@types/node": "^11.9.0",
+    "@types/react": "16.8.13",
     "awesome-typescript-loader": "^5.2.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
@@ -58,9 +61,6 @@
   "license": "MIT",
   "dependencies": {
     "@hot-loader/react-dom": "^16.8.1",
-    "@types/classnames": "^2.2.7",
-    "@types/node": "^11.9.0",
-    "@types/react": "16.8.13",
     "axios": "^0.18.0",
     "babel-runtime": "^6.26.0",
     "classnames": "^2.2.6",
