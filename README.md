@@ -61,3 +61,10 @@ Now we use github repos to store modules, but you can switch to npm without any 
 need to change package version every time changes were made and run ```npm publish``` after every change publication.
 
 The project will produce pure .js files to dist folder before publishing automatically.
+
+### Testing
+This project do tests: checks integrity for its own and flights/hotels data sources, checks if the components mounted
+together properly.
+
+To run test just type:
+```yarn run test```
