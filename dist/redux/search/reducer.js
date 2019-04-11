@@ -8,7 +8,7 @@ const setSearchString = (state, { query }) => (Object.assign({}, state, { query 
 const HANDLERS = {
     [constants_1.SEARCH_ACTIONS.SET_SEARCH_STRING]: setSearchString,
 };
-const INITIAL_STATE = {
+exports.INITIAL_STATE = {
     query: '',
     departure_date: date_fns_1.format(new Date(), 'dd MMM yyyy'),
     arrival_date: date_fns_1.format(date_fns_1.addDays(new Date(), 14), 'dd MMM yyyy'),
@@ -18,5 +18,5 @@ exports.searchPersistConfig = {
     whitelist: [],
     storage: storage_1.default,
 };
-exports.default = reduxsauce_1.createReducer(INITIAL_STATE, HANDLERS);
+exports.default = reduxsauce_1.createReducer(exports.INITIAL_STATE, HANDLERS);
 //# sourceMappingURL=reducer.js.map

@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var reducer_1 = require("./redux/search/reducer");
 exports.searchReducer = reducer_1.default;
 exports.searchPersistConfig = reducer_1.searchPersistConfig;
+exports.SEARCH_INITIAL_STATE = reducer_1.INITIAL_STATE;
 var sagas_1 = require("./redux/search/sagas");
 exports.searchSaga = sagas_1.default;
 var paths_1 = require("./constants/paths");
