@@ -30,7 +30,6 @@ build:
       
 deploy:
   variables:
-    DOCKER_HOST: tcp://docker:2375/
     DOCKER_DRIVER: overlay2
   stage: deploy
   image: docker:stable
