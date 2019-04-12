@@ -132,6 +132,7 @@ module.exports = () => {
     },
     output: {
       publicPath: '/',
+      path: join(__dirname, './public'),
       filename: isDevelopment ? '[name].[hash].js' : '[name].[contenthash].js',
     },
     optimization: {
@@ -167,7 +168,7 @@ module.exports = () => {
       historyApiFallback: true,
       port: 8000,
       // host: '192.168.88.40',
-      contentBase: 'dist',
+      contentBase: 'public',
       publicPath: '/',
       hot: true,
     }

@@ -1,6 +1,6 @@
 {
   "name": "jtb.search",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "copy-css": "copyfiles -u 1 \"./src/**/**/**/**/*.scss\" ./dist",
     "prepare": "npm run build",
     "start": "NODE_ENV=development webpack-dev-server --mode development --hot --open --inline --progress",
-    "profile": "webpack --json > stats.json",
+    "prod": "NODE_ENV=production webpack --env production --config=webpack.config.js --progress -p",
     "test": "jest"
   },
   "author": "Fedor Katurov <gotham48@gmail.com>",
