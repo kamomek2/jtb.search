@@ -1,4 +1,5 @@
-image: node:10
+before_script:
+  - yarn install
 
 cache:
   paths:
@@ -6,12 +7,21 @@ cache:
 
 stages:
   - test
-
+  - build
+  
 test:
+  image: node:10
   stage: test
   script:
-   - yarn install
    - yarn test
+   - yarn prod
+  tags:
+   - docker
+ 
+ build:
+  image: node:10
+  stage: build
+  script:
    - yarn prod
   tags:
    - docker
