@@ -32,6 +32,8 @@ deploy:
   stage: deploy
   image: docker:latest
   script:
+   - apk add --no-cache curl jq python py-pip
+   - pip install awscli
    - $(aws ecr get-login --no-include-email --region us-east-1)
    - docker build -t jtbsearch .
    - docker tag jtbsearch:latest 579318172733.dkr.ecr.us-east-1.amazonaws.com/jtbsearch:latest
