@@ -1,4 +1,4 @@
-image: node:10
+image: node:10-alpine
 
 cache:
   paths:
@@ -12,3 +12,5 @@ test:
   script:
    - yarn install
    - yarn test
+  tags:
+    docker
