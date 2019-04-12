@@ -39,7 +39,7 @@ deploy:
    - docker tag jtbsearch:latest 579318172733.dkr.ecr.us-east-1.amazonaws.com/jtbsearch:latest
    - docker push 579318172733.dkr.ecr.us-east-1.amazonaws.com/jtbsearch:latest
   tags:
-   - docker
+   - dind
   dependencies:
     - build    
       
