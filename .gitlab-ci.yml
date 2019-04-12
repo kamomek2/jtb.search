@@ -1,20 +1,19 @@
 image: node:10
 
-before_script:
-  - yarn install
-
 cache:
   paths:
   - node_modules/
 
 test:
   script:
+   - yarn install
    - yarn test
   tags:
    - docker
  
  build:
   script:
+   - yarn install
    - yarn prod
   tags:
    - docker
