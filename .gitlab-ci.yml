@@ -37,7 +37,7 @@ deploy:
    - apk add --no-cache curl jq python py-pip
    - pip install awscli
    - $(aws ecr get-login --no-include-email --region us-east-1)
-   - export DOCKER_HOST="tcp://localhost:2375"
+   - export DOCKER_HOST="tcp://docker:2375"
    - docker build -t jtbsearch .
    - docker tag jtbsearch:latest 579318172733.dkr.ecr.us-east-1.amazonaws.com/jtbsearch:latest
    - docker push 579318172733.dkr.ecr.us-east-1.amazonaws.com/jtbsearch:latest
