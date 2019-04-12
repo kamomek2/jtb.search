@@ -12,5 +12,5 @@ test:
   script:
    - yarn install
    - yarn test
-  tags:
+  tag:
     docker
